@@ -15,6 +15,7 @@ export class Nyan {
 
     const tweets = new OdnTweets(this.tweetData.accountData);
     tweets.text = "なにが" + this.tweetData.text + "ですか、恥を知りなさい。";
+    tweets.targetTweetId = this.tweetData.idStr;
 
     // ツイートを投稿
     tweets.postTweet((isSuccess) => {
