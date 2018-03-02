@@ -32,6 +32,6 @@ export class Nyan {
    * @returns {boolean}
    */
   static isValid(tweetData: OdnTweetData): boolean {
-    return tweetData.text.match(/^(((にゃ|ニャ|ﾆｬ)(ー|-|-|ｰ)*(ん|ン|ﾝ))|(meow))(。|!|！)?$/gi) ? true : false;
+    return false === tweetData.isRetweet && tweetData.text.match(/^(((にゃ|ニャ|ﾆｬ)(ー|-|-|ｰ)*(ん|ン|ﾝ))|(meow))(。|!|！)?$/gi) ? true : false;
   }
 }
